@@ -2,22 +2,13 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const rateLimit = require('express-rate-limit')
-const nodemailer = require('nodemailer')
+const { Resend } = require('resend')
 
 const app = express()
 app.set('trust proxy', 1)
 const PORT = process.env.PORT || 3001
 
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
-  family: 4,
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: (process.env.GMAIL_APP_PASSWORD || '').replace(/\s/g, ''),
-  },
-})
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 app.use(cors({
   origin: process.env.CLIENT_URL,
@@ -174,18 +165,18 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
   }
 
   const { name, lastName, phone, email, company, service, budget, message } = req.body
-  const from = `ALBuild Group <${process.env.GMAIL_USER}>`
+  const from = 'ALBuild Group <onboarding@resend.dev>'
   const adminEmail = process.env.ADMIN_EMAIL
 
   try {
     await Promise.all([
-      transporter.sendMail({
+      resend.emails.send({
         from,
         to: adminEmail,
         subject: `📋 ახალი მოთხოვნა: ${service} — ${name} ${lastName}`,
         html: adminHtml({ name, lastName, phone, email, company, service, budget, message }),
       }),
-      transporter.sendMail({
+      resend.emails.send({
         from,
         to: email,
         subject: 'ALBuild Group — თქვენი შეტყობინება მიღებულია ✓',
@@ -194,7 +185,7 @@ app.post('/api/contact', contactLimiter, async (req, res) => {
     ])
     res.json({ success: true })
   } catch (err) {
-    console.error('Gmail error:', err?.message ?? err)
+    console.error('Resend error:', err?.message ?? err)
     res.status(500).json({ error: 'ელ-ფოსტის გაგზავნა ვერ მოხერხდა. სცადეთ მოგვიანებით.' })
   }
 })
