@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\" -Recurse -File | Where-Object { $_.Extension -match '\\\\.\\(html|css|js\\)$' } | Select-Object FullName | Sort-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\" -Recurse -File | Where-Object { $_.Extension -match '\\\\.\\(html|css|js\\)$' -and $_.FullName -notmatch 'node_modules' } | Select-Object FullName | Sort-Object FullName)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\" -Force)",
+      "Bash(Select-Object Name, FullName)",
+      "PowerShell(Get-Content *)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\" | Where-Object { $_.PSIsContainer } | Select-Object Name)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\" | Select-Object Name, @{N='Type';E={if\\($_.PSIsContainer\\) {'Folder'} else {'File'}}})",
+      "Bash(node -e ' *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(Out-String -Width 300)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\" -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\" -Recurse -Force | Select-Object @{Name='Path';Expression={$_.FullName.Replace\\('C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\\\\',''\\)}} | Sort-Object Path)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\" -Recurse -File | Select-Object @{Name='RelativePath';Expression={$_.FullName.Replace\\('C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\\\\',''\\)}}, @{Name='Type';Expression={$_.Extension}} | Sort-Object RelativePath)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\\\\hooks\", \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\\\\components\\\\layout\", \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\\\\components\\\\sections\", \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\\\\client\\\\src\\\\components\\\\ui\")",
+      "Bash(Get-ChildItem -Force)",
+      "Bash(Select-Object -Property Name, FullName)",
+      "PowerShell(cd \"C:\\\\Users\\\\User\\\\Desktop\\\\AllBuild Group\"; Get-ChildItem -Force | Select-Object -Property Name, @{Name='Type';Expression={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}} | Format-Table -AutoSize)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git add *)"
+    ]
+  }
+}
