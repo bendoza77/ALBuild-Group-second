@@ -93,7 +93,7 @@ function adminHtml(d) {
       <div class="value msg">${escapeHtml(d.message)}</div>
     </div>
   </div>
-  <div class="foot">ALBuild Group &bull; info@albuildgroup.com &bull; +995 555 123 456</div>
+  <div class="foot">ALBuild Group &bull; albuild777@gmail.com &bull; +995 577 505 859</div>
 </div>
 </body>
 </html>`
@@ -146,8 +146,8 @@ function userHtml(name) {
     <div class="step"><div class="num">2</div><span>დაგიკავშირდება ტელეფონით ან ელ-ფოსტით კონსულტაციისთვის</span></div>
     <div class="step"><div class="num">3</div><span>მოგამზადებს ინდივიდუალურ შეთავაზებას თქვენს პროექტზე</span></div>
     <div class="info">
-      <p>&#128222;&nbsp; +995 555 123 456</p>
-      <p>&#9993;&nbsp; info@albuildgroup.com</p>
+      <p>&#128222;&nbsp; +995 577 505 859</p>
+      <p>&#9993;&nbsp; albuild777@gmail.com</p>
       <p>&#128205;&nbsp; ვაჟა-ფშაველას გამზ. 45, თბილისი</p>
     </div>
   </div>
