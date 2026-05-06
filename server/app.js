@@ -5,6 +5,7 @@ const rateLimit = require('express-rate-limit')
 const nodemailer = require('nodemailer')
 
 const app = express()
+app.set('trust proxy', 1)
 const PORT = process.env.PORT || 3001
 
 const transporter = nodemailer.createTransport({
