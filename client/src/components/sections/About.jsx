@@ -7,7 +7,6 @@ const CheckIcon = () => (
 )
 
 const features = [
-  'ISO 9001:2015 სერტიფიცირებული სამშენებლო პროცესები',
   'მხოლოდ სერტიფიცირებული, A-კლასის სამშენებლო მასალები',
   'გამოცდილი ინჟინრებისა და ოსტატების 80-კაციანი გუნდი',
   'ყოველი პროექტისთვის ვადების და ბიუჯეტის მკაცრი დაცვა',
@@ -73,7 +72,7 @@ const About = () => {
 
             {/* Floating experience badge */}
             <div className="absolute -bottom-5 -right-5 bg-gradient-to-br from-[#f97316] to-[#ea6c0a] rounded-2xl p-5 shadow-2xl shadow-[#f97316]/40 text-center z-10">
-              <p className="text-4xl font-extrabold text-white leading-none">15+</p>
+              <p className="text-4xl font-extrabold text-white leading-none">6+</p>
               <p className="text-white/80 text-xs font-semibold mt-1 uppercase tracking-wider">წელი</p>
               <p className="text-white/80 text-xs font-semibold uppercase tracking-wider">გამოცდილება</p>
             </div>
@@ -84,7 +83,7 @@ const About = () => {
             <p className="text-gray-700 text-lg leading-relaxed mb-5">{a.text1}</p>
             <p className="text-gray-600 leading-relaxed mb-5">{a.text2}</p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              ჩვენი წარმატება ეფუძნება სამ ძირეულ პრინციპს: ხარისხი, პუნქტუალურობა და გამჭვირვალობა. 2010 წლიდან დღემდე ჩვენ ავაშენეთ 200-ზე მეტი ობიექტი მთელი საქართველოს მასშტაბით — საცხოვრებელი სახლებიდან და ვილებიდან, კომერციული ცენტრებით, სამრეწველო ობიექტებით.
+              ჩვენი წარმატება ეფუძნება სამ ძირეულ პრინციპს: ხარისხი, პუნქტუალურობა და გამჭვირვალობა. 2020 წლიდან დღემდე ჩვენ ავაშენეთ 200-ზე მეტი ობიექტი მთელი საქართველოს მასშტაბით — საცხოვრებელი სახლებიდან და ვილებიდან, კომერციული ცენტრებით, სამრეწველო ობიექტებით.
             </p>
 
             {/* Feature checklist */}
