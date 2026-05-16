@@ -21,13 +21,6 @@ const trust = [
   { Icon: BadgeIcon, text: '2 წლის სამშენებლო გარანტია' },
 ]
 
-const bottomStats = [
-  { value: '6+', label: 'წლის გამოცდილება' },
-  { value: '200+', label: 'დასრულებული პროექტი' },
-  { value: '50+', label: 'კმაყოფილი კლიენტი' },
-  { value: '80+', label: 'გუნდის წევრი' },
-]
-
 const Hero = () => {
   const { content } = useSiteContent()
   const h = content.hero

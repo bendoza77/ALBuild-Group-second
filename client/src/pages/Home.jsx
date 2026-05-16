@@ -27,7 +27,6 @@ const Home = () => {
       <Hero />
       <About />
       <Stats />
-      <Services />
       <Process />
       <Projects />
       <Testimonials />
