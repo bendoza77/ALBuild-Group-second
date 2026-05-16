@@ -5,7 +5,6 @@ import Footer from '../components/layout/Footer'
 import Hero from '../components/sections/Hero'
 import About from '../components/sections/About'
 import Process from '../components/sections/Process'
-import Projects from '../components/sections/Projects'
 import Contact from '../components/sections/Contact'
 
 const Home = () => {
@@ -23,8 +22,8 @@ const Home = () => {
       <Navbar />
       <Hero />
       <About />
-      <Process />
-      <Projects />      <Contact />
+      <Process />     
+      <Contact />
       <Footer />
     </div>
   )

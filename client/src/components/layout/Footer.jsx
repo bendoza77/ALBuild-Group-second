@@ -5,7 +5,6 @@ import { useSiteContent } from '../../context/SiteContent'
 const navLinks = [
   { label: 'მთავარი', section: 'home' },
   { label: 'ჩვენ შესახებ', section: 'about' },
-  { label: 'სერვისები', section: 'services' },
   { label: 'პროექტები', section: 'projects' },
   { label: 'კონტაქტი', section: 'contact' },
 ]
@@ -109,9 +108,6 @@ const Footer = () => {
               </span>
             </ScrollLink>
             <p className="text-[#f5e6d3]/55 text-sm leading-relaxed mb-3">{f.tagline}</p>
-            <p className="text-[#f5e6d3]/40 text-xs leading-relaxed mb-6">
-              ლიცენზია: #GEO-C-0042 · ISO 9001:2015 სერტიფიცირებული
-            </p>
             <div className="flex gap-2.5">
               {socialLinks.map(({ Icon, href: defaultHref, label }) => {
                 const key = label.toLowerCase()

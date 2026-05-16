@@ -98,22 +98,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Bottom glassmorphic stats bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="bg-white/8 backdrop-blur-md border-t border-white/12">
-          <div className="max-w-5xl mx-auto px-4">
-            <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-              {bottomStats.map((s, i) => (
-                <div key={i} className="text-center py-5 px-4">
-                  <p className="text-2xl sm:text-3xl font-extrabold text-[#facc15]">{s.value}</p>
-                  <p className="text-white/50 text-xs mt-1">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Scroll indicator */}
       <div className="absolute bottom-28 left-1/2 -translate-x-1/2 z-20 animate-bounce">
         <svg className="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
