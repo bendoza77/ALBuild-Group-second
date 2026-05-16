@@ -17,12 +17,12 @@ const BadgeIcon = () => (
 )
 
 const trust = [
-  { Icon: AwardIcon, text: '15+ წლის გამოცდილება' },
+  { Icon: AwardIcon, text: '6+ წლის გამოცდილება' },
   { Icon: BadgeIcon, text: '2 წლის სამშენებლო გარანტია' },
 ]
 
 const bottomStats = [
-  { value: '15+', label: 'წლის გამოცდილება' },
+  { value: '6+', label: 'წლის გამოცდილება' },
   { value: '200+', label: 'დასრულებული პროექტი' },
   { value: '50+', label: 'კმაყოფილი კლიენტი' },
   { value: '80+', label: 'გუნდის წევრი' },

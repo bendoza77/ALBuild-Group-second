@@ -47,7 +47,7 @@ const Stats = () => {
           <p className="text-[#facc15] font-semibold uppercase tracking-widest text-sm mb-3">ჩვენი მიღწევები</p>
           <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-2">რიცხვები, რომლითაც ვამაყობთ</h2>
           <p className="text-white/45 text-base max-w-md mx-auto mt-3">
-            15 წლის მუდმივი ზრდა, პროფესიონალიზმი და შეუდარებელი ხარისხი.
+            6 წლის მუდმივი ზრდა, პროფესიონალიზმი და შეუდარებელი ხარისხი.
           </p>
         </div>
 
