@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import Logo from '../ui/Logo'
+import { useSiteContent } from '../../context/SiteContent'
 
 const NAV_LINKS = [
   { label: 'მთავარი', hash: 'home' },
@@ -23,6 +24,9 @@ const Navbar = () => {
   const [active, setActive] = useState('home')
   const navigate = useNavigate()
   const location = useLocation()
+  const { content } = useSiteContent()
+  const phone = content?.contact?.phone ?? '+995555123456'
+  const whatsappUrl = `https://wa.me/${phone.replace(/\D/g, '')}`
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -86,13 +90,15 @@ const Navbar = () => {
 
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={(e) => scrollToSection('contact', e)}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#f97316] hover:bg-[#ea6c0a] active:scale-95 text-white text-sm font-semibold shadow-lg shadow-[#f97316]/30 hover:shadow-[#f97316]/50 transition-all duration-200"
             >
               <PhoneIcon />
               დაგვიკავშირდით
-            </button>
+            </a>
             <button
               className="md:hidden flex items-center justify-center w-9 h-9 rounded-lg border border-white/25 text-white hover:bg-white/10 transition-colors duration-200"
               onClick={() => setMenuOpen(prev => !prev)}
@@ -133,13 +139,16 @@ const Navbar = () => {
             </button>
           ))}
           <div className="pt-3 mt-2 border-t border-white/10">
-            <button
-              onClick={(e) => { scrollToSection('contact', e); setMenuOpen(false) }}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-xl bg-[#f97316] hover:bg-[#ea6c0a] text-white font-semibold transition-colors duration-200 shadow-lg shadow-[#f97316]/25"
             >
               <PhoneIcon />
               დაგვიკავშირდით
-            </button>
+            </a>
           </div>
         </div>
       </div>
