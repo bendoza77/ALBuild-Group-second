@@ -92,16 +92,6 @@ const About = () => {
                 </div>
               ))}
             </div>
-
-            {/* Stats row */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-[#f5e6d3]">
-              {a.stats?.map(s => (
-                <div key={s.label}>
-                  <p className="text-3xl font-extrabold text-[#f97316]">{s.value}</p>
-                  <p className="text-gray-500 text-sm mt-0.5">{s.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
 
